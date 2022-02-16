@@ -9,17 +9,61 @@ using System.Drawing;
 
 namespace Visualizer
 {
+	///<summary>
+	/// Класс Scene 
+	/// взаимодействия пользователя со сценой
+	///</summary>
     public class Scene
     {
+	///<summary>
+	/// свойство _isPerspective
+	/// объект типа bool
+	/// сцену отрисовывать в перспективе
+	///</summary>
         private bool _isPerspective;
+	
+	///<summary>
+	/// свойство _isWireframe
+	/// объект типа bool
+	/// сцену отрисовывать полигональной
+	///</summary>
         private bool _isWireframe;
         private bool _isFilled;
+
+	///<summary>
+	/// свойство _near
+	/// объект типа double
+	/// приближать камеру
+	///</summary>
         private double _near;
+	
+	///<summary>
+	/// свойство _far
+	/// объект типа double
+	/// отдалять камеру
+	///</summary>
         private double _far;
+	
+	///<summary>
+	/// свойство _isZBuffer
+	/// объект типа bool
+	/// использовать метод Zbuffer
+	///</summary>
         private bool _isZBuffer;
+	
+	///<summary>
+	/// свойство MainCamera
+	/// объект класса Camera
+	/// проецирование изображения с камеры на сцену
+	///</summary>
         public Camera MainCamera;
         public ObservableCollection<SceneObject> ObjectList { get; set; }
 
+	///<summary>
+	/// Метод Far типа double
+	/// получение и отправка текущего  
+	/// значения отдаления
+	///</summary>
         public double Far {
             get
             {
@@ -31,7 +75,12 @@ namespace Visualizer
                 ScenePropertiesChanged();
             }
         }
-
+	
+	///<summary>
+	/// Метод Near типа double
+	/// получение и отправка текущего  
+	/// значения приближения
+	///</summary>
         public double Near
         {
             get
@@ -45,6 +94,11 @@ namespace Visualizer
             }
         }
 
+	///<summary>
+	/// Метод IsZBuffer типа bool
+	/// получение и отправка текущего  
+	/// значения использования zbuffer
+	///</summary>
         public bool IsZBuffer
         {
             get
@@ -58,6 +112,11 @@ namespace Visualizer
             }
         }
 
+	///<summary>
+	/// Метод IsPerspective типа bool
+	/// получение и отправка текущего  
+	/// значения использования перспективы
+	///</summary>
         public bool IsPerspective {
             get
             {
@@ -70,6 +129,11 @@ namespace Visualizer
             }
         }
 
+	///<summary>
+	/// Метод IsWireframe типа bool
+	/// получение и отправка текущего  
+	/// значения вида отрисовки
+	///</summary>
         public bool IsWireframe
         {
             get
@@ -83,6 +147,11 @@ namespace Visualizer
             }
         }
 
+	///<summary>
+	/// Метод IsFilled типа bool
+	/// получение и отправка текущего  
+	/// значения вида отрисовки (не wireframe)
+	///</summary>
         public bool IsFilled
         {
             get
@@ -101,6 +170,11 @@ namespace Visualizer
         public event ObjectListChanged OnObjectListChanged;
         public delegate void ObjectListChanged();
 
+	///<summary>
+	/// Конструктор класса Scene
+	/// Создание объекта класса Scene  
+	/// по умолчанию
+	///</summary>
         public Scene()
         {
             MainCamera = new Camera(-4, 2, 4);
@@ -121,7 +195,12 @@ namespace Visualizer
         {
             OnSceneChangedEvent();
         }
-
+	
+	///<summary>
+	/// Метод AddObject типа void
+	/// добавление выбранных объектов на сцене
+	///</summary>
+	///<param name="obj">Объект класса SceneObject</param>
         public void AddObject(SceneObject obj)
         {
             obj.PropertyChanged += TransformChanged;

@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE article>
+<article
+  xmlns="http://docbook.org/ns/docbook" version="5.0"
+  xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <info>
+    <title></title>
+  </info>
+  <section xml:id="vr-engine">
+    <title>VR-Engine</title>
+    <para>
+      <emphasis role="strong">VR Engine</emphasis> – это программный
+      комплекс, который упрощает разработку игр, предоставляя вам набор
+      необходимых для разработки инструментов. Обобщённо говоря, данный
+      продукт ответственен за организацию и поведение игровых объектов,
+      а также за их отображение на экране. Ваша же задача – выбрать, как
+      они будут выглядеть и как себя вести. Для этого движок предоставит
+      вам возможность создавать и удалять объекты, задавать их
+      параметры, добавлять логику и управлять ресурсами. Данный игровой
+      движок разработан с целью упрощения создания ПО и игр для VR/AR.
+    </para>
+    <section xml:id="модули-которые-предоставляет-vr-engine">
+      <title>Модули, которые предоставляет VR Engine:</title>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            Система частиц;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Редактор местности;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Модуль редактирования звуковых дорожек и вызывающих их
+            событий;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Модуль отображения и взаимодействия со сценой в реальном
+            времени;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Модуль шейдера;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Модуль диалоговых окон;
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            Редактор написания кода.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <section xml:id="модуль-шейдера">
+        <title>Модуль шейдера</title>
+        <para>
+          Программы, работающие с трёхмерной графикой и видео (игры,
+          GIS, CAD, CAM и др.), используют шейдеры для определения
+          параметров геометрических объектов или изображения, для
+          изменения изображения (для создания эффектов сдвига,
+          отражения, преломления, затемнения с учётом заданных
+          параметров поглощения и рассеяния света, для наложения текстур
+          на геометрические объекты и др.).
+        </para>
+      </section>
+      <section xml:id="модуль-отображения-и-взаимодействия-со-сценой">
+        <title>Модуль отображения и взаимодействия со сценой</title>
+        <para>
+          Модуль отображения и взаимодействия со сценой является
+          интерфейсом пользователя и через взаимодействие с ним нажатием
+          горячих клавиш и кнопок мыши можно вызвать методы модуля
+          шейдера, которые перерисуют изображение на сцене. Также на нее
+          можно добавлять объекты, изменять, перемещать и прочее.
+        </para>
+      </section>
+      <section xml:id="модуль-воспроизведения-звука">
+        <title>Модуль воспроизведения звука</title>
+        <para>
+          Модуль воспроизведения звука представляет собой
+          пользовательский интерфейс для добавления звуковых дорожек в
+          создаваемый проект, их изменения, удаления и пр.
+        </para>
+      </section>
+      <section xml:id="редактор-местности">
+        <title>Редактор местности</title>
+        <para>
+          Редактор местности представляет собой удобный инструмент для
+          быстрого создания рельефа карты, ее высот, добавление объектов
+          и их генерацию. Система уровней представляет собой интерфейс
+          для удобного создания карт (уровней) проекта, их изменения в
+          сцене, удобное переключение уровней между собой (осуществление
+          навигации по проекту).
+        </para>
+      </section>
+      <section xml:id="система-частиц">
+        <title>Система частиц</title>
+        <para>
+          Система частиц – используемый в компьютерной графике способ
+          представления объектов, не имеющих чётких геометрических
+          границ (различные облака, туманности, взрывы, струи пара,
+          шлейфы от ракет, дым, снег, дождь и т. п.). Системы частиц
+          могут быть реализованы как в двумерной, так и в трёхмерной
+          графике.
+        </para>
+      </section>
+      <section xml:id="модуль-диалоговых-окон">
+        <title>Модуль диалоговых окон</title>
+        <para>
+          Модуль диалоговых окон – это инструмент для добавления в игру
+          различных панелей элементов (главных и второстепенных меню,
+          настроек графики и персонажа, всплывающих подсказок во время
+          прохождения игры, карты местности и пр.).
+        </para>
+      </section>
+      <section xml:id="редактор-написания-кода">
+        <title>Редактор написания кода</title>
+        <para>
+          Редактор написания кода представляет собой модуль, в котором
+          описывается основная логика приложения, которую нельзя
+          реализовать с помощью ранее описанных инструментов. Это вызов
+          от элементов меню, изменения показателей игрока в зависимости
+          от его действий и их отображение в соответствующем диалоговом
+          окне или изменения звуковой дорожки в зависимости от ситуации,
+          с которой столкнулся игрок и пр.
+        </para>
+      </section>
+    </section>
+    <section xml:id="архитектура-vr-engine">
+      <title>Архитектура VR Engine</title>
+      <para>
+        Ниже представлена диаграмма классов разрабатываемого ПО.
+        Диаграмма классов ### Классы модуля шейдера К модулю шейдера
+        относятся такие классы, как: * <emphasis>Vector4</emphasis>, *
+        <emphasis>Mesh</emphasis>, * <emphasis>MeshCreater</emphasis>, *
+        <emphasis>Matrix</emphasis>, * <emphasis>Matrix4</emphasis>, *
+        <emphasis>Face</emphasis>, * <emphasis>Camera</emphasis>, *
+        <emphasis>Vertex</emphasis>.
+      </para>
+      <para>
+        Более подробно рассмотрим класс <emphasis>Camera</emphasis>.
+      </para>
+      <programlisting>
+  ///&lt;summary&gt;
+    /// Класс Camera
+    /// реализация камеры
+    /// основной объект в сцене
+    ///&lt;/summary&gt;
+    public class Camera : INotifyPropertyChanged
+    {
+    ///&lt;summary&gt;
+    /// свойство _position
+    /// значение типа класса Vector3
+    /// расположения камеры
+    ///&lt;/summary&gt;
+        private Vector3 _position;
+
+    ///&lt;summary&gt;
+    /// свойство _observerPoint
+    /// объект класса Vector3
+    /// вектор расположения точки наблюдения
+    ///&lt;/summary&gt;
+        private Vector3 _observerPoint;
+
+    ///&lt;summary&gt;
+    /// свойство _focus
+    /// значение типа double 
+    /// фокус камеры
+    ///&lt;/summary&gt;
+        private double _focus;
+
+    ///&lt;summary&gt;
+    /// Метод Focus типа double
+    /// получение и отправка текущего  
+    /// значения фокуса камеры
+    ///&lt;/summary&gt;
+        public double Focus
+        {
+            get
+            {
+                return _focus;
+            }
+            set
+            {
+                _focus = value;
+                OnCoordinateChanged(nameof(Focus));
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Метод Position типа Vector3
+    /// получение и отправка текущего  
+    /// значения позиции камеры
+    ///&lt;/summary&gt;
+        public Vector3 Position
+        {
+            get {
+                return _position;
+            }
+            set
+            {
+                _position = value;
+                OnCoordinateChanged(nameof(Position));
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Метод ObserverPoint типа Vector3
+    /// получение и отправка текущего  
+    /// значения точки наблюдения
+    ///&lt;/summary&gt;
+        public Vector3 ObserverPoint
+        {
+            get
+            {
+                return _observerPoint;
+            }
+            set
+            {
+                _observerPoint = value;
+                OnCoordinateChanged(nameof(ObserverPoint));
+            }
+        }
+    }
+</programlisting>
+      <section xml:id="классы-модуля-диалоговых-окон">
+        <title>Классы модуля диалоговых окон</title>
+        <para>
+          К модулю диалоговых окон относятся такие классы, как: *
+          <emphasis>Dialog_interface</emphasis>, *
+          <emphasis>Pattern_dialog</emphasis>, *
+          <emphasis>DialogEditor</emphasis>.
+        </para>
+        <para>
+          Более подробно рассмотрим класс
+          <emphasis>Dialog_interface</emphasis>.
+        </para>
+        <programlisting>
+///&lt;summary&gt;
+    /// Класс Dialog_interface 
+    /// интерфейс для создания,редактирования диалоговых окон
+    /// родительский класс Form
+    ///&lt;/summary&gt;
+    public partial class Dialog_interface : Form
+    {
+    ///&lt;summary&gt;
+    /// свойство editor
+    /// объект класса DialogEditor
+    /// редактирование диалоговых окон 
+    ///&lt;/summary&gt;
+        DialogEditor editor = new DialogEditor();
+
+    ///&lt;summary&gt;
+    /// свойство pattern
+    /// объект класса Pattern_dialog
+    /// быстрое применение шаблонов диалоговых окон
+    ///&lt;/summary&gt;
+        Pattern_dialog pattern = new Pattern_dialog();
+
+    ///&lt;summary&gt;
+    /// Конструктор класса Dialog_interface
+    /// инициализация графических компонентов
+    ///&lt;/summary&gt;
+        public Dialog_interface()
+        {
+            InitializeComponent();
+        }
+    }
+</programlisting>
+      </section>
+      <section xml:id="классы-редактора-написания-кода">
+        <title>Классы редактора написания кода</title>
+        <para>
+          К модулю редактора написания кода относятся такие классы, как:
+          * <emphasis>Code_editor</emphasis>,*
+          <emphasis>Pattern_code</emphasis>, *
+          <emphasis>Expert_system</emphasis>, *
+          <emphasis>Interpreter</emphasis>.
+        </para>
+        <para>
+          Более подробно рассмотрим класс
+          <emphasis>Code_editor</emphasis>.
+        </para>
+        <programlisting>
+  ///&lt;summary&gt;
+    /// Класс Code_editor
+    /// интерфейс для редактирования кода
+    /// родительский класс Form
+    ///&lt;/summary&gt;
+    public partial class Code_editor : Form
+    {
+    ///&lt;summary&gt;
+    /// Конструктор класса Code_editor
+    /// инициализация графических компонентов
+    ///&lt;/summary&gt;
+        public Code_editor()
+        {
+            InitializeComponent();
+        }
+    ///&lt;summary&gt;
+    /// свойство code
+    /// объект класса Pattern_code
+    /// быстрое применение шаблонов
+    ///&lt;/summary&gt;
+        Pattern_code code = new Pattern_code();
+
+    ///&lt;summary&gt;
+    /// свойство interpreter
+    /// объект класса Interpreter
+    /// интерпретатор написанного кода
+    ///&lt;/summary&gt;
+        Interpreter interpreter = new Interpreter();
+
+    ///&lt;summary&gt;
+    /// свойство expert_System
+    /// объект класса Expert_system
+    /// экспертная система по выявлению потребностей
+    ///&lt;/summary&gt;
+        Expert_system expert_System = new Expert_system();
+    }
+</programlisting>
+      </section>
+      <section xml:id="классы-системы-частиц">
+        <title>Классы системы частиц</title>
+        <para>
+          К модулю системы частиц относятся такие классы, как: *
+          <emphasis>Particle_system</emphasis>, *
+          <emphasis>ParticleEvent</emphasis>, *
+          <emphasis>Particle</emphasis>, *
+          <emphasis>Patricle_DB</emphasis>.
+        </para>
+        <para>
+          Более подробно рассмотрим класс
+          <emphasis>Particle_system</emphasis>.
+        </para>
+        <programlisting>
+  ///&lt;summary&gt;
+    /// Класс Particle_system 
+    /// интерфейс для системы частиц
+    /// родительский класс Form
+    ///&lt;/summary&gt;
+    public partial class Particle_system : Form
+    {
+    ///&lt;summary&gt;
+    /// свойство particle
+    /// объект класса Particle
+    /// представление частицы
+    ///&lt;/summary&gt;
+        Particle particle = new Particle();
+
+    ///&lt;summary&gt;
+    /// свойство particleEvent
+    /// объект класса ParticleEvent
+    /// хранение поведения частиц для всех событий
+    ///&lt;/summary&gt;
+        ParticleEvent particleEvent = new ParticleEvent();
+
+    ///&lt;summary&gt;
+    /// свойство dB
+    /// объект класса Particle_DB
+    /// база данных шаблонов частиц
+    ///&lt;/summary&gt;
+        Particle_DB dB = new Particle_DB();
+
+    ///&lt;summary&gt;
+    /// свойство function
+    /// объект класса Particle_function
+    /// функции перемещения/поведения частиц в пространстве
+    ///&lt;/summary&gt;
+        Particle_function function = new Particle_function();
+
+    ///&lt;summary&gt;
+    /// Конструктор класса Particle_system
+    /// инициализация графических компонентов
+    ///&lt;/summary&gt;
+        public Particle_system()
+        {
+            InitializeComponent();
+        }
+    }
+</programlisting>
+      </section>
+      <section xml:id="классы-редактора-местности">
+        <title>Классы редактора местности</title>
+        <para>
+          К модулю редактора местности относятся такие классы, как: *
+          <emphasis>terrain_editor</emphasis>, *
+          <emphasis>Relief_map</emphasis>, *
+          <emphasis>PaintTexture</emphasis>, *
+          <emphasis>Generation_rule</emphasis>.
+        </para>
+        <para>
+          Более подробно рассмотрим класс
+          <emphasis>terrain_editor</emphasis>.
+        </para>
+        <programlisting>
+///&lt;summary&gt;
+    /// Класс terrain_editor 
+    /// интерфейс для редактора местности
+    /// родительский класс Form
+    ///&lt;/summary&gt;
+    public partial class terrain_editor : Form
+    {
+    ///&lt;summary&gt;
+    /// свойство rm
+    /// объект класса Relief_map
+    /// карта рельефа, объема и системы уровней
+    ///&lt;/summary&gt;
+        Relief_map rm = new Relief_map();
+
+    ///&lt;summary&gt;
+    /// свойство paintTexture
+    /// объект класса PaintTexture
+    /// набор цветовых палитр, текстур и наложение на рельеф
+    ///&lt;/summary&gt;
+        PaintTexture paintTexture = new PaintTexture();
+
+    ///&lt;summary&gt;
+    /// свойство gr
+    /// объект класса Generation_rule
+    /// правила генерации карты и их задача
+    ///&lt;/summary&gt;
+        Generation_rule gr = new Generation_rule();
+
+    ///&lt;summary&gt;
+    /// Конструктор класса terrain_editor
+    /// инициализация графических компонентов
+    ///&lt;/summary&gt;
+        public terrain_editor()
+        {
+            InitializeComponent();
+        }
+    }
+</programlisting>
+      </section>
+      <section xml:id="классы-модуля-воспроизведения-звука">
+        <title>Классы модуля воспроизведения звука</title>
+        <para>
+          К модулю воспроизведения звука относятся такие классы, как: *
+          <emphasis>Sound_interface</emphasis>, *
+          <emphasis>SoundEditor</emphasis>, *
+          <emphasis>Sound_DB</emphasis>, *
+          <emphasis>SoundEvent</emphasis>.
+        </para>
+        <para>
+          Более подробно рассмотрим класс
+          <emphasis>Sound_interface</emphasis>.
+        </para>
+        <programlisting>
+///&lt;summary&gt;
+    /// Класс Sound_interface
+    /// интерфейс для системы редактирования звуковых эффектов
+    /// родительский класс Form
+    ///&lt;/summary&gt;
+    public partial class Sound_interface : Form
+    {
+    ///&lt;summary&gt;
+    /// свойство se
+    /// объект класса SoundEditor
+    /// редактор звуковых дорожек
+    ///&lt;/summary&gt;
+        SoundEditor se = new SoundEditor();
+
+    ///&lt;summary&gt;
+    /// свойство soundEvent
+    /// объект класса SoundEvent
+    /// хранение звуковых эфектов для заданных событий
+    ///&lt;/summary&gt;
+        SoundEvent soundEvent = new SoundEvent();
+
+    ///&lt;summary&gt;
+    /// свойство Sound_DB
+    /// объект класса Sound_DB
+    /// хранение шаблонов звуковых эффектов и событий
+    ///&lt;/summary&gt;
+        Sound_DB Sound_DB = new Sound_DB();
+
+    ///&lt;summary&gt;
+    /// Конструктор класса Sound_interface
+    /// инициализация графических компонентов
+    ///&lt;/summary&gt;
+        public Sound_interface()
+        {
+            InitializeComponent();
+        }
+    }
+</programlisting>
+      </section>
+      <section xml:id="классы-модуля-отображения-и-взаимодействия-со-сценой">
+        <title>Классы модуля отображения и взаимодействия со
+        сценой</title>
+        <para>
+          К модулю отображения и взаимодействия со сценой относятся
+          такие классы, как: * <emphasis>Scene</emphasis>, *
+          <emphasis>DrawContainer</emphasis>, *
+          <emphasis>SceneObject</emphasis>, *
+          <emphasis>Vector3</emphasis>.
+        </para>
+        <para>
+          Более подробно рассмотрим класс <emphasis>Scene</emphasis>.
+        </para>
+        <programlisting>
+//&lt;summary&gt;
+    /// Класс Scene 
+    /// взаимодействия пользователя со сценой
+    ///&lt;/summary&gt;
+    public class Scene
+    {
+    ///&lt;summary&gt;
+    /// свойство _isPerspective
+    /// объект типа bool
+    /// сцену отрисовывать в перспективе
+    ///&lt;/summary&gt;
+        private bool _isPerspective;
+    
+    ///&lt;summary&gt;
+    /// свойство _isWireframe
+    /// объект типа bool
+    /// сцену отрисовывать полигональной
+    ///&lt;/summary&gt;
+        private bool _isWireframe;
+        private bool _isFilled;
+
+    ///&lt;summary&gt;
+    /// свойство _near
+    /// объект типа double
+    /// приближать камеру
+    ///&lt;/summary&gt;
+        private double _near;
+    
+    ///&lt;summary&gt;
+    /// свойство _far
+    /// объект типа double
+    /// отдалять камеру
+    ///&lt;/summary&gt;
+        private double _far;
+    
+    ///&lt;summary&gt;
+    /// свойство _isZBuffer
+    /// объект типа bool
+    /// использовать метод Zbuffer
+    ///&lt;/summary&gt;
+        private bool _isZBuffer;
+    
+    ///&lt;summary&gt;
+    /// свойство MainCamera
+    /// объект класса Camera
+    /// проецирование изображения с камеры на сцену
+    ///&lt;/summary&gt;
+        public Camera MainCamera;
+        public ObservableCollection&lt;SceneObject&gt; ObjectList { get; set; }
+</programlisting>
+        <para>
+          Методы класса <emphasis>Scene</emphasis> представлены как: *
+          конструктор класса <emphasis>Scene</emphasis>, * геттеры и
+          сеттеры свойств <emphasis>Scene</emphasis> (*_far<emphasis>,
+          </emphasis>_isZbuffer<emphasis>, </emphasis>_near<emphasis>,
+          </emphasis>_isPerspective<emphasis>,
+          </emphasis>_isWireframe<emphasis>,
+          </emphasis>_isFilled<emphasis>), </emphasis> метод добавления
+          объекта на сцену.
+        </para>
+        <programlisting>
+    ///&lt;summary&gt;
+    /// Метод Far типа double
+    /// получение и отправка текущего  
+    /// значения отдаления
+    ///&lt;/summary&gt;
+        public double Far {
+            get
+            {
+                return _far;
+            }
+            set
+            {
+                _far = value;
+                ScenePropertiesChanged();
+            }
+        }
+    
+    ///&lt;summary&gt;
+    /// Метод Near типа double
+    /// получение и отправка текущего  
+    /// значения приближения
+    ///&lt;/summary&gt;
+        public double Near
+        {
+            get
+            {
+                return _near;
+            }
+            set
+            {
+                _near = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Метод IsZBuffer типа bool
+    /// получение и отправка текущего  
+    /// значения использования zbuffer
+    ///&lt;/summary&gt;
+        public bool IsZBuffer
+        {
+            get
+            {
+                return _isZBuffer;
+            }
+            set
+            {
+                _isZBuffer = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Метод IsPerspective типа bool
+    /// получение и отправка текущего  
+    /// значения использования перспективы
+    ///&lt;/summary&gt;
+        public bool IsPerspective {
+            get
+            {
+                return _isPerspective;
+            }
+            set
+            {
+                _isPerspective = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Метод IsWireframe типа bool
+    /// получение и отправка текущего  
+    /// значения вида отрисовки
+    ///&lt;/summary&gt;
+        public bool IsWireframe
+        {
+            get
+            {
+                return _isWireframe;
+            }
+            set
+            {
+                _isWireframe = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Метод IsFilled типа bool
+    /// получение и отправка текущего  
+    /// значения вида отрисовки (не wireframe)
+    ///&lt;/summary&gt;
+        public bool IsFilled
+        {
+            get
+            {
+                return _isFilled;
+            }
+            set
+            {
+                _isFilled = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Конструктор класса Scene
+    /// Создание объекта класса Scene  
+    /// по умолчанию
+    ///&lt;/summary&gt;
+        public Scene()
+        {
+            MainCamera = new Camera(-4, 2, 4);
+            MainCamera.OnPositionChangedEvent += ScenePropertiesChanged;
+            MainCamera.OnObserverPointChangedEvent += ScenePropertiesChanged;
+            MainCamera.PropertyChanged += MainCamera_PropertyChanged;
+            ObjectList = new ObservableCollection&lt;SceneObject&gt;();
+            ObjectList.CollectionChanged += ObjectCollectionChanged;
+            _isPerspective = true;
+            _isFilled = true;
+            _isWireframe = false;
+            _isZBuffer = true;
+            _near = 0.2;
+            _far = 100.0;
+        }
+    
+    ///&lt;summary&gt;
+    /// Метод AddObject типа void
+    /// добавление выбранных объектов на сцене
+    ///&lt;/summary&gt;
+    ///&lt;param name=&quot;obj&quot;&gt;Объект класса SceneObject&lt;/param&gt;
+        public void AddObject(SceneObject obj)
+        {
+            obj.PropertyChanged += TransformChanged;
+            ObjectList.Add(obj);
+        }
+   }
+</programlisting>
+      </section>
+    </section>
+    <section xml:id="сценарии-использования">
+      <title>Сценарии использования</title>
+      <section xml:id="environment-artist">
+        <title><emphasis>Environment artist</emphasis></title>
+        <para>
+          Данный продукт может использоваться для создания любого
+          рельефа, иерархии карт, процедурной генерации местности с
+          помощью удобного инструментария редактора местности
+          terrain_editor. 
+          </para>
+      </section>
+        <section xml:id="artist">
+          <title><emphasis>3D-artist</emphasis></title>
+          <para>
+              Данный продукт может использоваться для необычной и современной
+          презентации своих проектов. Например, перенос 3D-модели в
+          Blender на сцену VR Engine. С помощью интуитивно-понятного
+          интерфейса, похожего на аналоги, человек без особого
+          технического образования может добавить свои файлы, выбрать
+          интересующий шаблон сцены, освещения и получить за короткий
+          срок готовую VR-презентацию своего продукта и добавить себе в
+          портфолио.
+           </para>
+        </section>
+        <section xml:id="software-programmer">
+            <title><emphasis>Software Programmer</emphasis> </title>
+        <para>
+            Данный вид пользователя может разрабатывать более уникальные продукты
+            на основе шаблонов или на чистом ЯП. Добавлять новые модули
+            проектирования, утилиты для упрощения работы и пр.
+        </para>
+        </section>
+         <section xml:id="vfx-designer">
+             <title><emphasis>VFX-дesigner</emphasis></title>
+             <para>
+                 Художник по визуальным эффектам может использовать данный продукт для создания
+                спецэффектов, настройки и доработки существующих шаблонов
+                эффектов, частиц с помощью модуля <emphasis>Particle_system</emphasis>. 
+             </para>
+         </section>
+        </section>
+    </section>
+</article>
