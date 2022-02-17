@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="generator" content="pandoc" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+        <title>Scene</title>
+        <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+    </head>
+    <body>
+        <h2>Scene</h2>
+        <p>Класс Scene реализует взаимодействие пользователя со сценой.</p>
+        <pre><code>
+    ///&lt;summary&gt;
+    /// Класс Scene 
+    /// взаимодействия пользователя со сценой
+    ///&lt;/summary&gt;
+    public class Scene
+    {
+    ///&lt;summary&gt;
+    /// свойство _isPerspective
+    /// объект типа bool
+    /// сцену отрисовывать в перспективе
+    ///&lt;/summary&gt;
+        private bool _isPerspective;
+    
+    ///&lt;summary&gt;
+    /// свойство _isWireframe
+    /// объект типа bool
+    /// сцену отрисовывать полигональной
+    ///&lt;/summary&gt;
+        private bool _isWireframe;
+        private bool _isFilled;
+
+    ///&lt;summary&gt;
+    /// свойство _near
+    /// объект типа double
+    /// приближать камеру
+    ///&lt;/summary&gt;
+        private double _near;
+    
+    ///&lt;summary&gt;
+    /// свойство _far
+    /// объект типа double
+    /// отдалять камеру
+    ///&lt;/summary&gt;
+        private double _far;
+    
+    ///&lt;summary&gt;
+    /// свойство _isZBuffer
+    /// объект типа bool
+    /// использовать метод Zbuffer
+    ///&lt;/summary&gt;
+        private bool _isZBuffer;
+    
+    ///&lt;summary&gt;
+    /// свойство MainCamera
+    /// объект класса Camera
+    /// проецирование изображения с камеры на сцену
+    ///&lt;/summary&gt;
+        public Camera MainCamera;
+        public ObservableCollection&lt;SceneObject&gt; ObjectList { get; set; }</code></pre>
+        <p>Методы класса <em>Scene</em> представлены как:</p>
+        <ul>
+            <li> конструктор класса <em>Scene</em>,</li>
+            <li> геттеры и сеттеры свойств <em>Scene</em> (<em>*_far</em>, <em>_isZbuffer</em>, <em>_near</em>, <em>_isPerspective</em>, <em>_isWireframe</em>, <em>_isFilled</em>),</li>
+            <li> метод добавления объекта на сцену.</li>
+        </ul>
+        <pre><code>    ///&lt;summary&gt;
+    /// Метод Far типа double
+    /// получение и отправка текущего  
+    /// значения отдаления
+    ///&lt;/summary&gt;
+        public double Far {
+            get
+            {
+                return _far;
+            }
+            set
+            {
+                _far = value;
+                ScenePropertiesChanged();
+            }
+        }
+    
+    ///&lt;summary&gt;
+    /// Метод Near типа double
+    /// получение и отправка текущего  
+    /// значения приближения
+    ///&lt;/summary&gt;
+        public double Near
+        {
+            get
+            {
+                return _near;
+            }
+            set
+            {
+                _near = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    ///&lt;summary&gt;
+    /// Метод IsZBuffer типа bool
+    /// получение и отправка текущего  
+    /// значения использования zbuffer
+    ///&lt;/summary&gt;
+        public bool IsZBuffer
+        {
+            get
+            {
+                return _isZBuffer;
+            }
+            set
+            {
+                _isZBuffer = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    /// &lt;summary&gt;
+    /// Метод IsPerspective типа bool
+    /// получение и отправка текущего  
+    /// значения использования перспективы
+    /// &lt;/summary&gt;
+        public bool IsPerspective {
+            get
+            {
+                return _isPerspective;
+            }
+            set
+            {
+                _isPerspective = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    /// &lt;summary&gt;
+    /// Метод IsWireframe типа bool
+    /// получение и отправка текущего  
+    /// значения вида отрисовки
+    /// &lt;/summary&gt;
+        public bool IsWireframe
+        {
+            get
+            {
+                return _isWireframe;
+            }
+            set
+            {
+                _isWireframe = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    /// &lt;summary&gt;
+    /// Метод IsFilled типа bool
+    /// получение и отправка текущего  
+    /// значения вида отрисовки (не wireframe)
+    /// &lt;/summary&gt;
+        public bool IsFilled
+        {
+            get
+            {
+                return _isFilled;
+            }
+            set
+            {
+                _isFilled = value;
+                ScenePropertiesChanged();
+            }
+        }
+
+    /// &lt;summary&gt;
+    /// Конструктор класса Scene
+    /// Создание объекта класса Scene  
+    /// по умолчанию
+    /// &lt;/summary&gt;
+        public Scene()
+        {
+            MainCamera = new Camera(-4, 2, 4);
+            MainCamera.OnPositionChangedEvent += ScenePropertiesChanged;
+            MainCamera.OnObserverPointChangedEvent += ScenePropertiesChanged;
+            MainCamera.PropertyChanged += MainCamera_PropertyChanged;
+            ObjectList = new ObservableCollection&lt;SceneObject&gt;();
+            ObjectList.CollectionChanged += ObjectCollectionChanged;
+            _isPerspective = true;
+            _isFilled = true;
+            _isWireframe = false;
+            _isZBuffer = true;
+            _near = 0.2;
+            _far = 100.0;
+        }
+    
+    ///&lt;summary&gt;
+    /// Метод AddObject типа void
+    /// добавление выбранных объектов на сцене
+    ///&lt;/summary&gt;
+    ///&lt;param name=&quot;obj&quot;&gt;Объект класса SceneObject&lt;/param&gt;
+        public void AddObject(SceneObject obj)
+        {
+            obj.PropertyChanged += TransformChanged;
+            ObjectList.Add(obj);
+        }
+   }</code></pre>
+   </body>
+</html>
